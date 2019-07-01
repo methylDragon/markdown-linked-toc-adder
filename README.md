@@ -41,7 +41,7 @@ Check out this nifty **dynamically generated** Table of Contents Below!
 
 ![1561970416824](assets/1561970416824.png)
 
-### 1.2. Pre-Processed <a name="1.2"></a>
+### 1.2. Post-Processed <a name="1.2"></a>
 [go to top](#top)
 
 [**File Link**](toc_example.md)
@@ -57,7 +57,7 @@ Check out this nifty **dynamically generated** Table of Contents Below!
 [go to top](#top)
 
 
-1. This script **only processes on level 2 and level 3 headers for neatness' sake**
+1. This script **only processes level 2 and level 3 headers for neatness' sake**
 
 2. Just format your Markdown Files as needed, ensuring all your headers are formatted nicely.
 
