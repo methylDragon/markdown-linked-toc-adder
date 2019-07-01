@@ -9,7 +9,7 @@ Suppose you have a Markdown file with nice headers. But they're all unlinked, an
 
 **So why not create a linked Table of Contents that lets you get an overview <u>and click the links to jump to the relevant sections!</u>**
 
-It even includes `go back to top` functionalities!
+It even includes `go to top` functionalities!
 
 > This README was even processed with this script! WOW!
 
@@ -20,8 +20,8 @@ Check out this nifty **dynamically generated** Table of Contents Below!
 ## Table Of Contents <a name="top"></a>
 
 1. [Check Out The Example!](#1)    
-   1.1. [[Pre-Processed](Example/example.md)](#1.1)    
-   1.2. [[Post-Processed](toc_example.md)](#1.2)    
+   1.1. [Pre-Processed](#1.1)    
+   1.2. [Post-Processed](#1.2)    
 2. [Usage](#2)    
    2.1. [Input Markdown Files](#2.1)    
    2.2. [Running the Script](#2.2)    
@@ -31,14 +31,18 @@ Check out this nifty **dynamically generated** Table of Contents Below!
 
 ## 1. Check Out The Example! <a name="1"></a>
 
-### 1.1. [Pre-Processed](Example/example.md) <a name="1.1"></a>
+### 1.1. Pre-Processed <a name="1.1"></a>
 [go to top](#top)
+
+[**File Link**](Example/example.md)
 
 
 ![1561970416824](assets/1561970416824.png)
 
-### 1.2. [Post-Processed](toc_example.md) <a name="1.2"></a>
+### 1.2. Pre-Processed <a name="1.2"></a>
 [go to top](#top)
+
+[**File Link**](toc_example.md)
 
 
 ![1561970478025](assets/1561970478025.png)
@@ -87,6 +91,8 @@ $ python linked_toc_adder.py <INPUT NAME> <OPTIONAL:OUTPUT NAME>
 ```
 
 > If no output file is specified, the file that is output will be prepended with `toc_`
+>
+> You might also need to put the code where the input file is.
 
 
 
