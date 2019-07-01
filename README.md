@@ -104,7 +104,7 @@ $ python linked_toc_adder.py <INPUT NAME> <OPTIONAL:OUTPUT NAME>
                         /| } O.=.O { |\
 ```
 
-​    
+> PS: Did you know that Markdown and methylDragon have the **same initials?**   
 
 ------
 
