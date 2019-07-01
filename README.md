@@ -1,6 +1,8 @@
 # markdown-linked-toc-adder
 Add a linked Table of Contents to any GitHub flavoured Markdown file!
 
+This script specifically adds in explicit links so you can click around the file on GitHub's web interface! (Though this should work on any web interface due to the links!)
+
 
 
 ## What This Package Does
