@@ -67,7 +67,7 @@ def generate_toc_string(header_tree):
         toc_string.append("%d. [%s](#%d)    \n" % (header_no, h2['text'], header_no))
 
         for child_no, child in enumerate(h2['children'], 1):
-            toc_string.append("   %d.%d. [%s](#%d.%d)    \n" % (header_no, child_no, child[1], header_no, child_no))
+            toc_string.append("   %d.%d [%s](#%d.%d)    \n" % (header_no, child_no, child[1], header_no, child_no))
 
     return "".join(toc_string)
 
@@ -85,7 +85,7 @@ def reconstruct_markdown(line_list, toc_line_no, toc_string, header_tree):
             child_line_no = child[0]
             child_text = child[1]
 
-            reconstructed_md[child_line_no - 1] = "### %d.%d. %s <a name=\"%d.%d\"></a>\n[go to top](#top)\n" % (header_no, child_no, child_text, header_no, child_no)
+            reconstructed_md[child_line_no - 1] = "### %d.%d %s <a name=\"%d.%d\"></a>\n[go to top](#top)\n" % (header_no, child_no, child_text, header_no, child_no)
 
     return "\n".join(reconstructed_md)
 
