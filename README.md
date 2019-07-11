@@ -22,18 +22,18 @@ Check out this nifty **dynamically generated** Table of Contents Below!
 ## Table Of Contents <a name="top"></a>
 
 1. [Check Out The Example!](#1)    
-   1.1. [Pre-Processed](#1.1)    
-   1.2. [Post-Processed](#1.2)    
+   1.1 [Pre-Processed](#1.1)    
+   1.2 [Post-Processed](#1.2)    
 2. [Usage](#2)    
-   2.1. [Input Markdown Files](#2.1)    
-   2.2. [Running the Script](#2.2)    
+   2.1 [Input Markdown Files](#2.1)    
+   2.2 [Running the Script](#2.2)    
 
 
 
 
 ## 1. Check Out The Example! <a name="1"></a>
 
-### 1.1. Pre-Processed <a name="1.1"></a>
+### 1.1 Pre-Processed <a name="1.1"></a>
 [go to top](#top)
 
 [**File Link**](Example/example.md)
@@ -41,7 +41,7 @@ Check out this nifty **dynamically generated** Table of Contents Below!
 
 ![1561970416824](assets/1561970416824.png)
 
-### 1.2. Post-Processed <a name="1.2"></a>
+### 1.2 Post-Processed <a name="1.2"></a>
 [go to top](#top)
 
 [**File Link**](toc_example.md)
@@ -53,7 +53,7 @@ Check out this nifty **dynamically generated** Table of Contents Below!
 
 ## 2. Usage <a name="2"></a>
 
-### 2.1. Input Markdown Files <a name="2.1"></a>
+### 2.1 Input Markdown Files <a name="2.1"></a>
 [go to top](#top)
 
 
@@ -82,7 +82,7 @@ Check out this nifty **dynamically generated** Table of Contents Below!
 
 
 
-### 2.2. Running the Script <a name="2.2"></a>
+### 2.2 Running the Script <a name="2.2"></a>
 [go to top](#top)
 
 

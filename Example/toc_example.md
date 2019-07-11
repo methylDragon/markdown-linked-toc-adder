@@ -12,9 +12,9 @@ Here's an example tutorial made in Markdown on how to **do dragon stuff!**
 ## Table Of Contents <a name="top"></a>
 
 1. [Introduction](#1)    
-   1.1. [H3 Section One](#1.1)    
-   1.2. [H3 Section Two](#1.2)    
-   1.3. [CH3!](#1.3)    
+   1.1 [H3 Section One](#1.1)    
+   1.2 [H3 Section Two](#1.2)    
+   1.3 [CH3!](#1.3)    
 2. [Big Section 2](#2)    
    2.1. [Excellent](#2.1)    
    2.2. [Amazing!](#2.2)    
@@ -24,19 +24,19 @@ Here's an example tutorial made in Markdown on how to **do dragon stuff!**
 
 ## 1. Introduction <a name="1"></a>
 
-### 1.1. H3 Section One <a name="1.1"></a>
+### 1.1 H3 Section One <a name="1.1"></a>
 [go to top](#top)
 
 
 Ra
 
-### 1.2. H3 Section Two <a name="1.2"></a>
+### 1.2 H3 Section Two <a name="1.2"></a>
 [go to top](#top)
 
 
 Raa
 
-### 1.3. CH3! <a name="1.3"></a>
+### 1.3 CH3! <a name="1.3"></a>
 [go to top](#top)
 
 
@@ -50,13 +50,13 @@ methyl::doDragonStuff();
 
 ## 2. Big Section 2 <a name="2"></a>
 
-### 2.1. Excellent <a name="2.1"></a>
+### 2.1 Excellent <a name="2.1"></a>
 [go to top](#top)
 
 
 Whee! ### Tricky Trick!
 
-### 2.2. Amazing! <a name="2.2"></a>
+### 2.2 Amazing! <a name="2.2"></a>
 [go to top](#top)
 
 
