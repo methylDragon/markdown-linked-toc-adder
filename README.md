@@ -86,7 +86,7 @@ Check out this nifty **dynamically generated** Table of Contents Below!
 [go to top](#top)
 
 
-You need **Python** to run the script
+You need **Python** to run the script. **Run this specifically on Python 3, otherwise it doesn't behave as expected!**
 
 ```shell
 $ python linked_toc_adder.py <INPUT NAME> <OPTIONAL:OUTPUT NAME>
