@@ -49,7 +49,7 @@ def construct_header_tree(non_code_line_list):
 
     for line_no, line in non_code_line_list:
         if line.startswith("#"):
-            level = line.count("#")
+            level = line.split(" ")[0].count("#")
             text = line[level:].strip()
 
             if level == 2:
