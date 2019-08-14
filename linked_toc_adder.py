@@ -9,6 +9,7 @@ import copy
 import re
 
 def find_toc_line_no(line_list):
+    """Find insertion point for generated table of contents."""
     if type(line_list) is str:
         line_list = line_list.split("\n")
 
@@ -25,6 +26,7 @@ def find_toc_line_no(line_list):
     return toc_line_no
 
 def filter_out_code_blocks(line_list, toc_line_no):
+    """Exclude code blocks from header search."""
     if type(line_list) is str:
         line_list = line_list.split("\n")
 
@@ -35,15 +37,21 @@ def filter_out_code_blocks(line_list, toc_line_no):
         if "```" not in line and non_code:
             non_code_line_list.append((line_no, line))
 
+        # Track if we are in a code block or not
+        # Note: This naively assumes no one will put a ``` in their code
+        # Which is somewhat reasonable, but not foolproof
         elif "```" in line:
             if non_code:
+                # Open if we aren't and encounter ```
                 non_code = False
             elif not non_code:
+                # Close if we are and encounter ```
                 non_code = True
 
     return non_code_line_list
 
 def construct_header_tree(non_code_line_list):
+    """Construct a tree of header levels and their line numbers."""
     header_tree = {}
     last_h2 = -1
 
@@ -61,8 +69,10 @@ def construct_header_tree(non_code_line_list):
     return header_tree
 
 def generate_toc_string(header_tree):
+    """Generate the table of contents."""
     toc_string = ["## Table Of Contents <a name=\"top\"></a>\n\n"]
 
+    # Go through the header tree
     for header_no, h2 in enumerate(header_tree.values(), 1):
         toc_string.append("%d. [%s](#%d)    \n" % (header_no, h2['text'], header_no))
 
@@ -72,19 +82,22 @@ def generate_toc_string(header_tree):
     return "".join(toc_string)
 
 def reconstruct_markdown(line_list, toc_line_no, toc_string, header_tree):
+    """Add the TOC, links, and header numbers to the markdown document."""
     reconstructed_md = copy.copy(line_list)
-    reconstructed_md[toc_line_no - 1] = toc_string
+    reconstructed_md[toc_line_no - 1] = toc_string # Add the TOC
 
     for header_no, h2 in enumerate(header_tree.items(), 1):
         header_line_no = h2[0]
         header_text = h2[1]['text'].strip()
 
+        # Replace H2 line with the numbering, and end with the hyperlink
         reconstructed_md[header_line_no - 1] = "## %d. %s <a name=\"%d\"></a>" % (header_no, h2[1]['text'], header_no)
 
         for child_no, child in enumerate(h2[1]['children'], 1):
             child_line_no = child[0]
             child_text = child[1]
 
+            # Replace H3 line with the numbering, and end with the hyperlink and go to top link
             reconstructed_md[child_line_no - 1] = "### %d.%d %s <a name=\"%d.%d\"></a>\n[go to top](#top)\n" % (header_no, child_no, child_text, header_no, child_no)
 
     return "\n".join(reconstructed_md)
